@@ -1,5 +1,6 @@
 ## Window Opener
 
+
 A small javaScript utility to make sure that `window.open` actually opens **same domain** windows at the size you requested.
 
 ### Why
