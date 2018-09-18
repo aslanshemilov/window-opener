@@ -1,0 +1,33 @@
+{
+  "name": "window-opener",
+  "title": "Window Opener",
+  "description": "A small javaScript utility to make sure that `window.open` actually opens a window at the size you requested.",
+  "keywords": [
+    "javascript",
+    "window.open"
+  ],
+  "main": "./window-opener.js",
+  "author": {
+    "name": "Matt Bryson"
+  },
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattbryson/window-opener.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mattbryson/window-opener/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.githubusercontent.com/mattbryson/window-opener/master/LICENCE"
+    },
+    {
+      "type": "GPL V2",
+      "url": "https://raw.githubusercontent.com/mattbryson/window-opener/master/LICENCE"
+    }
+  ],
+  "readmeFilename": "README.md",
+  "homepage": "https://mattbryson.github.io/window-opener/"
+}

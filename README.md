@@ -1,37 +1,80 @@
-## Welcome to GitHub Pages
+## Window Opener
 
-You can use the [editor on GitHub](https://github.com/mattbryson/window-opener/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+A small javaScript utility to make sure that `window.open` actually opens **same domain** windows at the size you requested.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Why
 
-### Markdown
+Opening a window with a set viewport is notoriously difficult across all the different browsers, and they usually end up 20px or so too short.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### How
 
-```markdown
-Syntax highlighted code block
+It opens a new window as per usual, but then checks the `innerHeight` and `innerWidth` match the initial request, and adjusts the window size accordingly.
 
-# Header 1
-## Header 2
-### Header 3
+### Wont
 
-- Bulleted
-- List
+Unfortunately it will not run cross domain due to same origin security policies.
 
-1. Numbered
-2. List
+## Installation  
+### NPM
+````bash
+npm install window-opener --save
+````
+### YARN
+````bash
+yarn add window-opener
+````
+### Bower
+````bash
+bower install window-opener --save
+````
+### Manual
+Include the file in your project.
+````html
+<script type="text/javascript" src="window-opener.js"></script>
+````
 
-**Bold** and _Italic_ and `Code` text
+## Usage
 
-[Link](url) and ![Image](src)
-```
+### Browser
+````html
+<script type="text/javascript" src="window-opener.js"></script>
+<script>
+    windowOpener.open('http:://www.domain.com', '_blank', 'width=500px, height=500px');
+</script>
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+````
 
-### Jekyll Themes
+### Require
+````javascript
+define(['path/to/window-opener'], function (windowOpener) {
+    windowOpener.open('http:://www.domain.com', '_blank', 'width=500px, height=500px');
+});
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mattbryson/window-opener/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+````
 
-### Support or Contact
+## Demo
+(demo/index.html)
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## API
+
+### open
+This is exactly the same as `window.open`
+
+### wrap
+Wraps the native `window.open` method with `windowOpener.open`, meaning you don't have to update any of your code.
+
+````javascript
+windowOpener.wrap();
+
+...
+
+// all window.open calls now run via windowOpener.open
+window.open('http:://www.domain.com', '_blank', 'width=500px, height=500px');
+
+
+````
+
+### unWrap
+Restores the native `window.open` method
+
+
