@@ -1,0 +1,36 @@
+<html style="background-color:red">
+
+<script>
+    window.addEventListener('load', () => {
+
+        document.getElementById('info').innerHTML = "Initial Size : " + window.innerWidth + " x " + window.innerHeight;
+        document.getElementById('info').innerHTML += "<br/><br/>";
+    })
+
+    window.addEventListener('resize', () => {
+        document.getElementById('info').innerHTML += "Adjusted Size : " + window.innerWidth + " x " + window.innerHeight;
+    });
+
+</script>
+
+    <body style="background-color:white; padding:5px; margin:0px; width:500px; height:500px; border:5px solid green; box-sizing: border-box">
+        <h3>This window is supposed to have 500px x 500px inner dimensions</h3>
+        You should see a 5px solid green border all the way round the edge of the new window
+        <br/>
+        <br/>
+        If any scrollbars and the window is too small
+        <br/>
+        <br/>
+        If any RED is visible the window is too big
+        
+        <b id="info">
+
+        </b>
+
+    </body>
+
+
+    
+
+    
+</html>

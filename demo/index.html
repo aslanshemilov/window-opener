@@ -1,0 +1,47 @@
+<html>
+
+	<head>
+        <style>
+            a {
+                font-size:14px;
+                display: block;
+                margin-bottom:20px;
+            }
+        </style>
+
+        <script language="Javascript" type="text/javascript" src="../window-opener.js"></script>
+
+        <script>
+
+            function nativeOpen() {
+                windowOpener.unWrap(); // call this to un wrap the native method 
+                window.open('500px.html', '_blank', 'width=500px,height=500px');
+                windowOpener.wrap();// no re wrap it so we can text wrappedOpener below..
+            }
+
+            function openerOpen() {
+                windowOpener.open('500px.html', '_blank', 'width=500px,height=500px');
+            }
+
+            function wrappedOpener() {
+                window.open('500px.html', '_blank', 'width=500,height=500');                
+            }
+
+
+        </script>
+	</head>
+	<body>
+        <a href="#" onClick="nativeOpen()">
+            Open 500px with native window.open
+        </a>
+
+        <a href="#" onClick="openerOpen()">
+            Open 500px with windowOpener
+        </a>
+
+        <a href="#" onClick="wrappedOpener()">
+            Open 500px with wrapped window.open using windowOpener
+        </a>
+    </body>
+
+</html>
