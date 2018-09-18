@@ -39,7 +39,7 @@ Include the file in your project.
 ````html
 <script type="text/javascript" src="window-opener.js"></script>
 <script>
-    windowOpener.open('http:://www.domain.com', '_blank', 'width=500px, height=500px');
+    windowOpener.open('http://www.domain.com', '_blank', 'width=500px, height=500px');
 </script>
 
 ````
@@ -47,7 +47,7 @@ Include the file in your project.
 ### Require
 ````javascript
 define(['path/to/window-opener'], function (windowOpener) {
-    windowOpener.open('http:://www.domain.com', '_blank', 'width=500px, height=500px');
+    windowOpener.open('http://www.domain.com', '_blank', 'width=500px, height=500px');
 });
 
 ````
@@ -69,7 +69,7 @@ windowOpener.wrap();
 ...
 
 // all window.open calls now run via windowOpener.open
-window.open('http:://www.domain.com', '_blank', 'width=500px, height=500px');
+window.open('http://www.domain.com', '_blank', 'width=500px, height=500px');
 
 
 ````
