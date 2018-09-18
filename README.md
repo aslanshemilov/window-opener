@@ -57,10 +57,10 @@ define(['path/to/window-opener'], function (windowOpener) {
 
 ## API
 
-### open
+### open( url, windowName, [windowFeatures] )
 This is exactly the same as `window.open`
 
-### wrap
+### wrap()
 Wraps the native `window.open` method with `windowOpener.open`, meaning you don't have to update any of your code.
 
 ````javascript
@@ -74,7 +74,7 @@ window.open('http://www.domain.com', '_blank', 'width=500px, height=500px');
 
 ````
 
-### unWrap
+### unWrap()
 Restores the native `window.open` method
 
 
