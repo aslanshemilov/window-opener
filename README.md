@@ -53,7 +53,7 @@ define(['path/to/window-opener'], function (windowOpener) {
 ````
 
 ## Demo
-(demo/index.html)
+[A super simple demo](demo/index.html)
 
 ## API
 
